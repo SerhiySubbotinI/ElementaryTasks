@@ -14,14 +14,12 @@ public class ChessBoard {
             System.out.println();
         }
     }
-
     public static int checkIntegerInputNumber(String task) {
-        //method for correct input
         Scanner keyboard = new Scanner(System.in);
         int checkNumber;
         do {
             System.out.print("Please enter the ".concat(task) + " of the chessboard: ");
-            while (!keyboard.hasNextInt()) {//check input
+            while (!keyboard.hasNextInt()) {
                 System.out.print("That is not a number. Please enter the ".concat(task) + ": ");
                 keyboard.next();
             }
