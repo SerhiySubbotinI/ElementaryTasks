@@ -20,12 +20,11 @@ public class LuckyTickets {
         }
 
         totalTickets = ticket.ticketQty(txt);
-        int[] unckeked = new int[totalTickets];
-        unckeked = ticket.uncheckedTicket(txt, totalTickets);
+        int [] unckeked = ticket.uncheckedTicket(txt, totalTickets);
 
         Algorithm metodOfLuck = new Algorithm();
 
-        int metod = 0;
+        int metod;
         do {
             String fileRules = "C:\\Users\\Admin\\IdeaProjects\\ElementaryTasks\\src\\main\\java\\task6\\Rules.txt";
             String txtRules = readtxt.readFromFile(fileRules);
@@ -42,7 +41,7 @@ public class LuckyTickets {
                 case 3:
                     System.exit(0);
             }
-        } while (metod != 3);
+        } while (true);
     }
 }
 
