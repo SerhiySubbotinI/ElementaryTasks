@@ -1,0 +1,5 @@
+-1- Moscow - if there is a six-digit number on the ticket, and the sum of the first three
+digits is equal to the sum of the last three, then this ticket is considered lucky.
+-2- Peter - if the sum of the even digits of the ticket is equal to the
+sum of the odd digits of the ticket, then the ticket is considered lucky.
+-3- Exit from the program

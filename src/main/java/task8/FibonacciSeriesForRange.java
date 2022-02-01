@@ -1,3 +1,5 @@
+package task8;
+
 import java.util.Scanner;
 
 public class FibonacciSeriesForRange {
@@ -11,7 +13,7 @@ public class FibonacciSeriesForRange {
         lastNumber = keyboard.nextLong();
 
         //use array with for
-        long[] result = new long[100000000];
+        long[] result = new long[1000000];
         result[0] = 0;
         result[1] = 1;
         for (int i = 2; i < lastNumber; ++i) {
