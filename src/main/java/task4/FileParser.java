@@ -8,7 +8,7 @@ public class FileParser {
         FileUtils filePath = new FileUtils();
         Utils myConstants = new Utils();
         TextUtils txt = new TextUtils();
-        System.out.println("C:\\Users\\Admin\\IdeaProjects\\ElementaryTasks\\src\\main\\java\\task4\\Text.txt");
+        //System.out.println("C:\\Users\\Admin\\IdeaProjects\\ElementaryTasks\\src\\main\\java\\task4\\Text.txt");
         do {
             int mode = Integer.parseInt(inputData.InputString("1. Count the number of occurrences of " +
                     "a string in a text file.\n2. Replace a string with another one in a text file\n3. Exit from " +
