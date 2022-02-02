@@ -11,7 +11,7 @@ public class Algorithm {
             four = (tickets[i] % 1000) / 100;
             five = ((tickets[i] % 1000) / 10) % 10;
             six = (tickets[i] % 1000) % 10;
-            System.out.print(i+1 + "\t" + one + " " + two + " " + three + " " + four + " " + five + " " + six);
+            System.out.print(i + 1 + "\t" + one + " " + two + " " + three + " " + four + " " + five + " " + six);
             if (one + two + three == four + five + six) {
                 lucky++;
                 System.out.println(" - Lucky ticket");
@@ -23,12 +23,13 @@ public class Algorithm {
         System.out.println("The number of lucky tickets for the Moscow algorithm: " + lucky + "\n");
     }
 
-    public boolean dividesByTwo(int a){
-        return (a%2==0);
+    public boolean dividesByTwo(int a) {
+        return (a % 2 == 0);
     }
 
     public void piter(int[] tickets) {
-        int lucky = 0, unLucky = 0;
+        int lucky = 0;
+        int unLucky = 0;
         int one, two, three, four, five, six;
         for (int i = 0; i < tickets.length; i++) {
             one = (tickets[i] / 1000) / 100;
@@ -37,38 +38,38 @@ public class Algorithm {
             four = (tickets[i] % 1000) / 100;
             five = ((tickets[i] % 1000) / 10) % 10;
             six = (tickets[i] % 1000) % 10;
-            System.out.print(i+1 + "\t" + one + " " + two + " " + three + " " + four + " " + five + " " + six);
+            System.out.print(i + 1 + "\t" + one + " " + two + " " + three + " " + four + " " + five + " " + six);
             int evenNumber = 0, oddNumber = 0;
 
-            if(dividesByTwo(one))
-            evenNumber += one;
+            if (dividesByTwo(one))
+                evenNumber += one;
             else
-                oddNumber +=one;
+                oddNumber += one;
 
-            if(dividesByTwo(two))
+            if (dividesByTwo(two))
                 evenNumber += two;
             else
-                oddNumber +=two;
+                oddNumber += two;
 
-            if(dividesByTwo(three))
+            if (dividesByTwo(three))
                 evenNumber += three;
             else
-                oddNumber +=three;
+                oddNumber += three;
 
-            if(dividesByTwo(four))
+            if (dividesByTwo(four))
                 evenNumber += four;
             else
-                oddNumber +=four;
+                oddNumber += four;
 
-            if(dividesByTwo(five))
+            if (dividesByTwo(five))
                 evenNumber += five;
             else
-                oddNumber +=five;
+                oddNumber += five;
 
-            if(dividesByTwo(six))
+            if (dividesByTwo(six))
                 evenNumber += six;
             else
-                oddNumber +=six;
+                oddNumber += six;
 
             if (evenNumber == oddNumber) {
                 lucky++;

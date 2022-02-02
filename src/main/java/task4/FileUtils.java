@@ -1,17 +1,13 @@
-package task6;
+package task4;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
-public class ReadMe {
+public class FileUtils {
     public String readFromFile(String fileName) throws IOException {
-
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         try {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
-
             while (line != null) {
                 sb.append(line);
                 sb.append(System.lineSeparator());
@@ -23,4 +19,14 @@ public class ReadMe {
             br.close();
         }
     }
+
+    public void writeFile(String filePath, String data) throws IOException{
+        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
+        BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+        bufferedWriter.write(data);
+        bufferedWriter.flush();
+        bufferedWriter.close();
+    }
+
 }

@@ -22,7 +22,7 @@ public class TicketsFactory {
     }
 
     public int[] uncheckedTicket(String txt, int ticketCounter) {
-        Scanner s = new Scanner(txt.replaceAll("[^0-9]", " "));
+        Scanner s = new Scanner(txt);
         int[] tickets = new int[ticketCounter];
         int index = 0;
         while (s.hasNextInt()) {

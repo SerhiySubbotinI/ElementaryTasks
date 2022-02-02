@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class LuckyTickets {
     public static void main(String[] args) throws IOException {
         Scanner keyboard = new Scanner(System.in);
-        ReadMe readtxt = new ReadMe();
-        //String fileName = keyboard.nextLine();
-
-        String fileName = "C:\\Users\\Admin\\IdeaProjects\\ElementaryTasks\\src\\main\\java\\task6\\TicketStore.txt";
+        WorkWithFile readtxt = new WorkWithFile();
+        System.out.println("Please, enter path to file");
+        String fileName = keyboard.nextLine();
+        //C:\Users\Admin\IdeaProjects\ElementaryTasks\src\main\java\task6\TicketStore.txt
+        //String fileName = "C:\\Users\\Admin\\IdeaProjects\\ElementaryTasks\\src\\main\\java\\task6\\TicketStore.txt";
         String txt = readtxt.readFromFile(fileName);
         TicketsFactory ticket = new TicketsFactory();
         int totalTickets;
