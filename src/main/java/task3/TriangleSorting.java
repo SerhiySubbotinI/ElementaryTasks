@@ -30,7 +30,6 @@ public class TriangleSorting {
         triangleSort(triangleName, triangleArea, countItem);
     }
 
-
     public static double triangleAreaGerone(double a, double b, double c) {
         double result;
         double scale = Math.pow(10, 3);
@@ -60,8 +59,5 @@ public class TriangleSorting {
         for (int index = 0; index <= countItem - 1; index++) {
             System.out.println(index + 1 + "." + "[Triangle " + triangleName[index] + "]:" + triangleArea[index] + " cm");
         }
-
     }
-
-
 }

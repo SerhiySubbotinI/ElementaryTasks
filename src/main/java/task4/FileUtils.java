@@ -4,17 +4,15 @@ import java.io.*;
 
 public class FileUtils {
     public String readFromFile(String fileName) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
-        try {
+        BufferedReader br = new BufferedReader(new FileReader(fileName));       // Creates a new file object
+        try {                                                                     // Read from the stream
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
-            while (line != null) {
-                sb.append(line);
-                sb.append(System.lineSeparator());
+            while (line != null) {                          // need to read all the buffer for a clean connection close
+                sb.append(line).append(System.lineSeparator());
                 line = br.readLine();
             }
-            String everything = sb.toString();
-            return everything;
+            return sb.toString();
         } finally {
             br.close();
         }
