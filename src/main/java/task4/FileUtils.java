@@ -8,8 +8,8 @@ public class FileUtils {
         try {                                                                     // Read from the stream
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
-            while (line != null) {                          // need to read all the buffer for a clean connection close
-                sb.append(line).append(System.lineSeparator());
+            while (line != null) {                             // need to read all the buffer for a clean connection close
+                sb.append(line).append(System.lineSeparator());  //get system specific line separator and append it  (\n)
                 line = br.readLine();
             }
             return sb.toString();
@@ -21,10 +21,10 @@ public class FileUtils {
     public void writeFile(String filePath, String data) throws IOException{
         FileOutputStream fileOutputStream = new FileOutputStream(filePath);
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-        BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-        bufferedWriter.write(data);
-        bufferedWriter.flush();
-        bufferedWriter.close();
+        BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);             // Creates a BufferedWriter
+        bufferedWriter.write(data);          // Writes the string to the file
+        bufferedWriter.flush();              // Flush the buffer writer
+        bufferedWriter.close();              // Closes the writer
     }
 
 }
